@@ -16,6 +16,15 @@ const Home = () => {
   useEffect(() => {
     getDataById(params.id);
   }, []);
-  return <div>{data && <div>{data.brand}</div>}</div>;
+  return (
+    <div>
+      {data && (
+        <div>
+          {data.brand}
+          {data.title}
+        </div>
+      )}
+    </div>
+  );
 };
 export default Home;

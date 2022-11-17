@@ -22,18 +22,15 @@ const Products = () => {
   }, []);
 
   return (
-    <div class="grid-container">
-      <div>
-        {" "}
-        {data &&
-          data.map((user) => {
-            return (
-              <div>
-                <Users user={user} />
-              </div>
-            );
-          })}
-      </div>
+    <div className="grid-container">
+      {data &&
+        data.map((user) => {
+          return (
+            <div>
+              <Users user={user} />
+            </div>
+          );
+        })}
     </div>
   );
 };
