@@ -3,10 +3,10 @@ import { Card, Container } from "react-bootstrap";
 import { Link } from "react-router-dom";
 const Users = ({ user }) => {
   return (
-    <Link to={`/${user.id}`}>
+    <Link href="#" class="text-decoration-none" style={{ color : "black"}}to={`/${user.id}`}>
       <Container>
         <Card style={{ width: "18rem" }}>
-          <Card.Img variant="top" src={user.images[0]}></Card.Img>
+          <Card.Img variant="top" src={user.images[0]} style={{height: 200}}></Card.Img>
           <Card.Body>
             <Card.Title style={{}}></Card.Title>
             <Card.Title>
@@ -14,13 +14,7 @@ const Users = ({ user }) => {
               <p>Title : {user.title}</p>
             </Card.Title>
             <Card.Title>
-              <p>Description : {user.description}</p>
-            </Card.Title>
-            <Card.Title>
               <p>Price : {user.price}</p>
-            </Card.Title>
-            <Card.Title>
-              <p>DiscountPercentage : {user.discountPercentage}</p>
             </Card.Title>
             <Card.Title>
               {" "}
@@ -36,10 +30,6 @@ const Users = ({ user }) => {
             <Card.Title>
               {" "}
               <p>Category : {user.category}</p>
-            </Card.Title>
-            <Card.Title>
-              {" "}
-              <p>Thumbnail : {user.thumbnail}</p>
             </Card.Title>
           </Card.Body>
         </Card>

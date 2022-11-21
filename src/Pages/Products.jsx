@@ -1,14 +1,16 @@
 import { useEffect, useState } from "react";
+import { Button  } from "react-bootstrap";
 import axios from "axios";
 import Users from "./Users";
 const Products = () => {
   const [data, setData] = useState([]);
-
+  const [id , setId]  = useState();
   const instance = axios.create({
     baseURL: "https://dummyjson.com/products",
     headers: {
       "Content-type": "application/json; charset=UTF-8",
     },
+
   });
 
   const getData = async () => {
@@ -22,6 +24,11 @@ const Products = () => {
   }, []);
 
   return (
+    <div>
+    
+    <input onChange={(e) => setId(e.target.value)}></input>
+      <Button onChange={getData}>
+      </Button>
     <div className="grid-container">
       {data &&
         data.map((user) => {
@@ -31,6 +38,7 @@ const Products = () => {
             </div>
           );
         })}
+    </div>
     </div>
   );
 };

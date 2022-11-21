@@ -20,8 +20,17 @@ const Home = () => {
     <div>
       {data && (
         <div>
-          {data.brand}
-          {data.title}
+          <img src={data.image} alt=""/>
+          <div style={{fontSize : 20 , alignItems : "center"}}>
+          <div>{data.brand}</div>
+          <div>{data.price}</div>
+          <div>{data.discountPercentage}</div>
+          <div>{data.title}</div>
+          <div>{data.category}</div>
+          <div>{data.stock}</div>
+          <div>{data.description}</div>
+          <div>{data.thumbnail}</div>
+          </div>
         </div>
       )}
     </div>
